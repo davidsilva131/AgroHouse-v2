@@ -1,7 +1,12 @@
+import Agro from "./Agro";
+import AgroDescription from "./AgroDescription";
+
 export default function Home () {
+
   return (
-    <main>
-      <h1>Main</h1>
+    <main className='py-11 px-4 flex flex-col'>
+      <Agro />
+      <AgroDescription />
     </main>
   )
 }
