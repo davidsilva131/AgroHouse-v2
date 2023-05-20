@@ -11,11 +11,11 @@ const DropMenu = () => {
         </button>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
-        <DropdownMenu.Content className='min-w-fit bg-white rounded-md p-2 md:hidden shadow-md animate-fade-down animate-duration-500' sideOffset={5}>
+        <DropdownMenu.Content className='min-w-fit bg-white rounded-md p-1 md:hidden shadow-md animate-fade-down animate-duration-500' sideOffset={5}>
           {
             PAGES_LINKS.map(page => (
-              <DropdownMenu.Item key={`${page.text} hamburguer`} className='text-xs text-green-700 rounded flex items-center h-6 px-1'>
-                <Link href={page.url}>
+              <DropdownMenu.Item key={`${page.text} hamburguer`} className='text-xs text-green-700 rounded flex items-center h-6 p-4'>
+                <Link href={page.url} alt={page.text} className='w-full'>
                   {page.text}
                 </Link>
               </DropdownMenu.Item>
