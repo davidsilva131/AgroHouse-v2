@@ -1,4 +1,6 @@
 'use client'
+import DialogLogIn from "./DialogLogIn"
+import DialogRegister from "./DialogRegister"
 import DropMenu from "./DropMenu"
 import LinkLogo from "./LinkLogo"
 import Links from "./Links"
@@ -15,8 +17,8 @@ const NavBar = () => {
         </div>
         <Links />
         <div className='flex gap-4'>
-          <button type='button' className='w-fit p-1 flex justify-center items-center bg-white rounded text-xs md:text-base md:p-2 hover:bg-opacity-80 hover:shadow-sm'>Registrarse</button>
-          <button type='button' className='w-fit p-1 flex justify-center items-center bg-green-500 rounded text-xs text-white md:text-base md:p-2 hover:bg-opacity-80 hover:shadow-sm'>Iniciar sesión</button>
+          <DialogRegister />
+          <DialogLogIn />
         </div>
       </section>
     </header>
