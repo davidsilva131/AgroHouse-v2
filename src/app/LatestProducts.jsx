@@ -1,4 +1,5 @@
 'use client'
+import { numberToMoney } from '@/utils/moneyFormat'
 import Image from 'next/image'
 import { useInView } from 'react-intersection-observer'
 
@@ -26,9 +27,11 @@ const LatestProducts = ({ prods }) => {
               height={150}
             />
           </picture>
-          <span>{el.name}</span>
-          <span>{el.price}</span>
-          <span>{el.region}</span>
+          <span className='text-green-400 text-lg font-bold uppercase'>
+            {el.name}
+          </span>
+          <span className='text-sm'>{numberToMoney(el.price)}</span>
+          <span className='text-base'>{el.region}</span>
         </article>
       ))}
     </section>
