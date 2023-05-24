@@ -1,5 +1,5 @@
 'use client'
-import { createNewUser } from '@/services/supaUser'
+import { createNewUser, signInWithEmail } from '@/services/supaUser'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Cross2Icon } from '@radix-ui/react-icons'
 import { useState } from 'react'
@@ -29,10 +29,14 @@ const DialogRegister = () => {
           showConfirmButton: false,
           timer: 1500,
         })
+        signInWithEmail(email, password)
         setIsOpen(false)
       }
     } else {
-      console.log('nopuede')
+      Swal.fire({
+        icon: 'error',
+        text: 'Porfavor ingrese todos los campos',
+      })
     }
   }
 
