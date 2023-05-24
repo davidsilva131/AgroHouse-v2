@@ -1,5 +1,5 @@
 'use client'
-import { createNewUser } from '@/services/supaProducts'
+import { createNewUser } from '@/services/supaUser'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Cross2Icon } from '@radix-ui/react-icons'
 import { useState } from 'react'
