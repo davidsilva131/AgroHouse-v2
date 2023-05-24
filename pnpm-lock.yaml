@@ -43,6 +43,9 @@ dependencies:
   react-redux:
     specifier: ^8.0.5
     version: 8.0.5(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+  sweetalert2:
+    specifier: 11.7.5
+    version: 11.7.5
   tailwindcss:
     specifier: 3.3.2
     version: 3.3.2
@@ -3221,6 +3224,10 @@ packages:
   /supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  /sweetalert2@11.7.5:
+    resolution: {integrity: sha512-RBPKdK8Uf9/bz9r4vy7x6sGqf0MioSXt1po1lAwwcl3AwbjHVTc5S0yud4ZJKU1EhvJFVDrFoqIpHwWERwZJEA==}
+    dev: false
 
   /synckit@0.8.5:
     resolution: {integrity: sha512-L1dapNV6vu2s/4Sputv8xGsCdAVlb5nRDMFU/E27D44l5U6cw1g0dGd45uLc+OXjNMmF4ntiMdCimzcjFKQI8Q==}
