@@ -14,3 +14,13 @@ export async function getSupaLatestProducts() {
 
   return latesProducts
 }
+
+export async function createNewUser(mail, password) {
+  const { data, error } = await supabase.auth.signUp({
+    email: mail,
+    password: password,
+    options: {
+      emailRedirectTo: 'http://localhost:3000/',
+    },
+  })
+}
