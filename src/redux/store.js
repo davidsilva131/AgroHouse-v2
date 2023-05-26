@@ -1,15 +1,20 @@
 import { configureStore } from '@reduxjs/toolkit'
 import userReducer from '@/redux/userSlice'
-import productsReducer from '@/redux/productsSlice'
 import farmersSlice from '@/redux/farmersSlice'
 import eventsSlice from '@/redux/eventsSlice'
+import { productsApi } from './productsApi'
+import { setupListeners } from '@reduxjs/toolkit/dist/query'
 
 export const store = configureStore({
   reducer: {
     user: userReducer,
-    products: productsReducer,
+    [productsApi.reducerPath]: productsApi.reducer,
     farmers: farmersSlice,
-    events: eventsSlice
+    events: eventsSlice,
   },
-  devTools: true
+  devTools: true,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat([productsApi.middleware]),
 })
+
+setupListeners(store.dispatch)
