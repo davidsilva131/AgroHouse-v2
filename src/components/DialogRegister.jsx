@@ -2,12 +2,14 @@
 import { createNewUser, signInWithEmail } from '@/services/supaUser'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Cross2Icon } from '@radix-ui/react-icons'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import Swal from 'sweetalert2'
 
 const emailRegex = new RegExp('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$')
-const DialogRegister = () => {
+const DialogRegister = ({ setSession }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const router = useRouter()
 
   const handleSignUp = () => {
     const { value: email } = document.getElementById('correo')
@@ -31,6 +33,7 @@ const DialogRegister = () => {
         })
         signInWithEmail(email, password)
         setIsOpen(false)
+        router.refresh()
       }
     } else {
       Swal.fire({
